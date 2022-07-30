@@ -1,4 +1,3 @@
-console.log('Client side javascript is loaded')
 
 const weatherForm = document.querySelector('form')  // querySelector method returns the first element matches a css selector
 const search = document.querySelector('input')    // manupulating input 
