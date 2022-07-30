@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="img" href="/img/weather.jpg">
+        <link rel="icon" href="/img/Weatherapplogo.png">
+        <link rel="stylesheet" href="./css/stylesheet.css">   <!-- linking css file to html -->
+        
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <p>Search your location here..</p>
+
+            <form>
+                <input placeholder="Enter Location">
+                <button>Search</button>
+            </form>
+            <div class="Weather">
+                <p id="message-1"></p>   {{!--contains location--}}
+                <p id="message-2"></p>   {{!--contains error message--}}
+            </div>
+        </div>
+        
+        {{>footer}}
+
+
+        {{!-- <img src="/img/KETAN.JPG"> --}}
+
+        <script src="/js/app.js"></script>
+    </body>
+</html>
