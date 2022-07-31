@@ -9,6 +9,7 @@ const forecast = require('./utils/forecast')
 
 //  define path for express configuration
 const app = express() // create a variable to store express application
+const port = process.env.PORT || 3000     // if app not running on the specified port then it will run locally on port 3000
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')  // customizing directory path
 const PartialsPath = path.join(__dirname,'../templates/partials')
@@ -135,8 +136,8 @@ app.get('*', (req,res) => { // '*' wildcard character is for match anything that
 // app.com/home
 // app.com/about
 
-app.listen(3000,() => {
-    console.log('Server is up on port 3000')
+app.listen(port,() => {
+    console.log('Server is up on port ' + port)
 })    // to start the server // and listen on the specific port
 
 

@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(e) => {   // addEventListener() method at
     messageOne.textContent = 'Loading'   // textContent property sets or returns the text content of the specified node // manupulate text content in browser
     messageTwo.textContent = ''        // render message and empty p
 
-    fetch('http://localhost:3000/weather?address='+ location).then((response) => {    
+    fetch('/weather?address='+ location).then((response) => {    
     response.json().then((data) => { // Data can be forecast in browser with json format
         if (data.error){
             messageOne.textContent = data.error
